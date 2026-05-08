@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis 15 Años - Brisa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-noche: #001a33;
+            --dorado: #d4af37;
+            --fondo-crema: #fffaf5;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+        body {
+            margin: 0; padding: 0;
+            background-color: var(--fondo-crema);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--azul-noche);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* TEXTURA DE FONDO (Estrellas) */
+        .main-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.4; z-index: -1;
+        }
+
+        /* FLORES AVANZADAS - Enlaces blindados */
+        .floral-corner {
+            position: absolute;
+            width: clamp(280px, 45vw, 480px);
+            z-index: 2;
+            pointer-events: none;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+        }
+        .top-left { 
+            top: -30px; left: -30px; 
+            content: url('https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNl93YXRlcmNvbG9yX2JsdWVfZmxvd2VyX2JvcmRlcl9pc29sYXRlZF9vbl93aGl0ZV8yZGUyNzc0OC1lYTRiLTRhZTYtYjU4ZS02ZTEyYmE0ZTMzZGUucG5n.png');
+        }
+        .bottom-right { 
+            bottom: -30px; right: -30px; 
+            transform: rotate(180deg);
+            content: url('https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsX29mZmljZV8yNl93YXRlcmNvbG9yX2JsdWVfZmxvd2VyX2JvcmRlcl9pc29sYXRlZF9vbl93aGl0ZV8yZGUyNzc0OC1lYTRiLTRhZTYtYjU4ZS02ZTEyYmE0ZTMzZGUucG5n.png');
+        }
+
+        /* SECCIONES */
+        section { padding: 80px 20px; position: relative; z-index: 5; }
+        .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(5em, 18vw, 9em);
+            margin: 10px 0;
+            color: var(--azul-noche);
+        }
+
+        .cursive-text {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(1.2em, 4.5vw, 1.5em);
+            line-height: 1.8;
+            color: #444;
+            max-width: 650px;
+            margin: 20px auto;
+        }
+
+        /* CONTADOR AZUL (Basado en tu captura) */
+        .countdown {
+            background: var(--azul-noche);
+            padding: 50px 0;
+            display: flex;
+            justify-content: center;
+            gap: clamp(15px, 5vw, 50px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+        }
+        .unit span { 
+            display: block; 
+            font-family: 'Playfair Display'; 
+            font-size: 3.5em; 
+            color: var(--dorado); 
+            font-weight: bold; 
+            line-height: 1;
+        }
+        .unit p { font-size: 0.8em; text-transform: uppercase; letter-spacing: 3px; color: white; margin-top: 10px; }
+
+        /* TARJETA DE DETALLES */
+        .card {
+            background: white;
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 60px 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 20px 50px;
+            background: var(--azul-noche);
+            color: white !important;
+            text-decoration: none;
+            border-radius: 100px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            border: 2px solid var(--azul-noche);
+            transition: 0.3s;
+        }
+        .btn:hover { background: transparent; color: var(--azul-noche) !important; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+
+    <div class="main-bg"></div>
+
+    <section class="hero">
+        <div class="floral-corner top-left"></div>
+        <p style="letter-spacing: 8px; color: var(--dorado); font-weight: 600;">TE INVITO A CELEBRAR</p>
+        <p style="font-family: 'Playfair Display'; font-size: 1.8em; margin: 5px 0;">Mis XV Años</p>
+        <h1>Brisa</h1>
+        <div class="cursive-text">
+            "Hay historias y personas que no voy a olvidar y recuerdos como este que siempre voy a guardar..."
+        </div>
+        <p style="font-size: 1.3em; letter-spacing: 3px; border-top: 1px solid var(--dorado); border-bottom: 1px solid var(--dorado); padding: 10px 30px;">
+            14 . NOVIEMBRE . 2026
+        </p>
+    </section>
+
+    <div class="countdown">
+        <div class="unit"><span id="days">00</span><p>Días</p></div>
+        <div class="unit"><span id="hours">00</span><p>Hs</p></div>
+        <div class="unit"><span id="minutes">00</span><p>Min</p></div>
+        <div class="unit"><span id="seconds">00</span><p>Seg</p></div>
+    </div>
+
+    <section>
+        <div class="card">
+            <h2 style="font-family: 'Playfair Display'; color: var(--dorado); font-size: 2.5em; margin-bottom: 10px;">Te espero</h2>
+            <p style="font-size: 1.4em; margin: 10px 0;"><strong>21:00 Horas</strong></p>
+            <p>La Plata, Buenos Aires</p>
+            <a href="https://wa.me/542213516687?text=¡Hola! Confirmo mi asistencia a los 15 de Brisa." class="btn">CONFIRMAR ASISTENCIA</a>
+        </div>
+        <div class="floral-corner bottom-right"></div>
+    </section>
+
+    <script>
+        const end = new Date("Nov 14, 2026 21:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = end - now;
+            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
+        }, 1000);
+    </script>
+</body>
+</html>
